@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <figure id="imagem-Login">
+      <img
+        src="./assets/images/HomeImage.svg"
+        alt="Imagem na Tela Inicial"
+      />
+    </figure>
+    <main id="formulario-acesso">
+      <form name="formulario" id="formulario">
+        <h5>Olá novamente</h5>
+        <h1>Faça login na sua conta</h1>
+        <label>E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Seu email aqui"
+        />
+        <span id="msgemail"></span>
+        <label>Senha</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Senha numérica aqui"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+          inputmode="numeric"
+        />
+        <span id="msgsenha"></span>
+        <section>
+          <div class="secao-lembrar">
+            <input type="checkbox" name="lembrar" id="lembrar" />
+            <p>Lembre-se de mim</p>
+          </div>
+        </section>
+        <button type="submit" id="btn-conta">Entrar na Conta</button>
+        <a>
+          <button id="btn-google" type="button">
+            <img src="./assets/images/Google.svg" alt="Simbolo do Google" />
+            Ou faça login com o Google
+          </button>
+        </a>
+        <h6 class="text-sem-conta">
+          Não tem uma conta ?
+          <span> <a> Cadastre - se </a></span>
+        </h6>
+      </form>
+    </main>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
